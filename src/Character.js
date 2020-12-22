@@ -1,4 +1,4 @@
-import React, { Component, useCallback } from "react";
+import React, { Component } from "react";
 import Table from 'react-bootstrap/Table';
 import xtypes from 'xtypejs';
 
@@ -46,7 +46,7 @@ class Character extends Component{
         for (var key in data) 
         { if (!data.hasOwnProperty(key))
             { continue; } 
-            if(key == "img")
+            if(key === "img")
                 img_scr = data[key]
         }
         console.log(img_scr)
@@ -64,7 +64,7 @@ class Character extends Component{
         for (var key in data) 
         { if (!data.hasOwnProperty(key))
             { continue; } 
-            if(key == "appearance")
+            if(key === "appearance")
                 seasons = data[key]
         }
         console.log(xtypes(seasons))
@@ -86,7 +86,7 @@ class Character extends Component{
         for (var key in newItems) 
         { if (!newItems.hasOwnProperty(key))
             { continue; } 
-            if(key == "appearance")
+            if(key === "appearance")
                 len = newItems[key].length
         }
         console.log(len)
